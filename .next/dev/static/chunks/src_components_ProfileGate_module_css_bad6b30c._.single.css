@@ -1,0 +1,155 @@
+/* [project]/src/components/ProfileGate.module.css [app-client] (css) */
+.ProfileGate-module__waBTTW__container {
+  z-index: 100;
+  background-color: #141414;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 2rem;
+  animation: .5s ProfileGate-module__waBTTW__fadeIn;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+}
+
+.ProfileGate-module__waBTTW__title {
+  color: #fff;
+  font-size: 3.5rem;
+  font-weight: 400;
+  font-family: var(--font-bebas), sans-serif;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 3rem;
+}
+
+.ProfileGate-module__waBTTW__profileGrid {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1000px;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .ProfileGate-module__waBTTW__title {
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+  }
+
+  .ProfileGate-module__waBTTW__profileGrid {
+    gap: 1.5rem;
+  }
+}
+
+.ProfileGate-module__waBTTW__profileCard {
+  cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  display: flex;
+}
+
+@keyframes ProfileGate-module__waBTTW__fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.ProfileGate-module__waBTTW__manageBtn {
+  color: gray;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-family: var(--font-inter), sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: #0000;
+  border: 1px solid gray;
+  margin-top: 3rem;
+  padding: .5rem 1.5rem;
+  transition: all .2s;
+}
+
+.ProfileGate-module__waBTTW__manageBtn:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+.ProfileGate-module__waBTTW__editOverlay {
+  background-color: #00000080;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.ProfileGate-module__waBTTW__dimmed img {
+  opacity: .5;
+}
+
+.ProfileGate-module__waBTTW__avatar {
+  border: 3px solid #0000;
+  border-radius: 4px;
+  width: 10vw;
+  min-width: 84px;
+  max-width: 200px;
+  height: 10vw;
+  min-height: 84px;
+  max-height: 200px;
+  transition: border-color .2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.ProfileGate-module__waBTTW__avatar img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.ProfileGate-module__waBTTW__profileCard:hover .ProfileGate-module__waBTTW__avatar {
+  border-color: #fff;
+}
+
+.ProfileGate-module__waBTTW__name {
+  color: gray;
+  font-size: 1.2rem;
+  font-family: var(--font-inter), sans-serif;
+  transition: color .2s;
+}
+
+.ProfileGate-module__waBTTW__profileCard:hover .ProfileGate-module__waBTTW__name {
+  color: #fff;
+}
+
+.ProfileGate-module__waBTTW__addProfile {
+  background-color: #0000;
+  border: 3px solid #333;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.ProfileGate-module__waBTTW__profileCard:hover .ProfileGate-module__waBTTW__addProfile {
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.ProfileGate-module__waBTTW__profileCard:hover .ProfileGate-module__waBTTW__addProfile svg {
+  color: #000 !important;
+}
+
+/*# sourceMappingURL=src_components_ProfileGate_module_css_bad6b30c._.single.css.map*/

@@ -1,0 +1,81 @@
+/* [project]/src/components/UploadZone.module.css [app-client] (css) */
+.UploadZone-module__SuXmHa__zone {
+  border: 2px dashed var(--netflix-gray);
+  cursor: pointer;
+  background-color: #141414cc;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  min-height: 300px;
+  margin: 2rem auto;
+  transition: all .3s;
+  display: flex;
+}
+
+.UploadZone-module__SuXmHa__zone:hover, .UploadZone-module__SuXmHa__dragging {
+  border-color: var(--netflix-red);
+  background-color: #e509141a;
+}
+
+.UploadZone-module__SuXmHa__hiddenInput {
+  display: none;
+}
+
+.UploadZone-module__SuXmHa__content {
+  text-align: center;
+  color: var(--foreground);
+  pointer-events: none;
+}
+
+.UploadZone-module__SuXmHa__iconWrapper {
+  color: var(--netflix-red);
+  margin-bottom: 1.5rem;
+}
+
+.UploadZone-module__SuXmHa__title {
+  margin-bottom: .5rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.UploadZone-module__SuXmHa__subtitle {
+  color: #ccc;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.UploadZone-module__SuXmHa__formats {
+  color: var(--netflix-gray);
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  font-size: .9rem;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .UploadZone-module__SuXmHa__zone {
+    width: 90%;
+    min-height: 200px;
+    margin: 1rem auto;
+    padding: 1.5rem;
+  }
+
+  .UploadZone-module__SuXmHa__title {
+    font-size: 1.4rem;
+  }
+
+  .UploadZone-module__SuXmHa__subtitle {
+    margin-bottom: 1rem;
+    font-size: .9rem;
+  }
+
+  .UploadZone-module__SuXmHa__iconWrapper svg {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/*# sourceMappingURL=src_components_UploadZone_module_css_bad6b30c._.single.css.map*/

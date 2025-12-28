@@ -1,0 +1,195 @@
+/* [project]/src/components/UploadZone.module.css [app-client] (css) */
+.UploadZone-module__SuXmHa__zone {
+  border: 2px dashed var(--netflix-gray);
+  cursor: pointer;
+  background-color: #141414cc;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  min-height: 300px;
+  margin: 2rem auto;
+  transition: all .3s;
+  display: flex;
+}
+
+.UploadZone-module__SuXmHa__zone:hover, .UploadZone-module__SuXmHa__dragging {
+  border-color: var(--netflix-red);
+  background-color: #e509141a;
+}
+
+.UploadZone-module__SuXmHa__hiddenInput {
+  display: none;
+}
+
+.UploadZone-module__SuXmHa__content {
+  text-align: center;
+  color: var(--foreground);
+  pointer-events: none;
+}
+
+.UploadZone-module__SuXmHa__iconWrapper {
+  color: var(--netflix-red);
+  margin-bottom: 1.5rem;
+}
+
+.UploadZone-module__SuXmHa__title {
+  margin-bottom: .5rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.UploadZone-module__SuXmHa__subtitle {
+  color: #ccc;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.UploadZone-module__SuXmHa__formats {
+  color: var(--netflix-gray);
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  font-size: .9rem;
+  display: flex;
+}
+
+/* [project]/src/components/VideoGrid.module.css [app-client] (css) */
+.VideoGrid-module__YxI0mG__gridContainer {
+  width: 100%;
+  padding: 2rem 4%;
+}
+
+.VideoGrid-module__YxI0mG__sectionTitle {
+  color: #e5e5e5;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.VideoGrid-module__YxI0mG__grid {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  display: grid;
+}
+
+.VideoGrid-module__YxI0mG__card {
+  background-color: var(--netflix-dark-gray);
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 4px;
+  transition: transform .3s cubic-bezier(.2, 0, 0, 1), z-index;
+  position: relative;
+  overflow: hidden;
+}
+
+.VideoGrid-module__YxI0mG__card:hover {
+  z-index: 10;
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px #00000080;
+}
+
+.VideoGrid-module__YxI0mG__thumbnailWrapper {
+  aspect-ratio: 16 / 9;
+  background-color: #000;
+  position: relative;
+}
+
+.VideoGrid-module__YxI0mG__thumbnail {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.VideoGrid-module__YxI0mG__placeholderThumb {
+  background: linear-gradient(45deg, #222, #333);
+  width: 100%;
+  height: 100%;
+}
+
+.VideoGrid-module__YxI0mG__overlay {
+  opacity: 0;
+  background: #0000004d;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transition: opacity .2s;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.VideoGrid-module__YxI0mG__card:hover .VideoGrid-module__YxI0mG__overlay {
+  opacity: 1;
+}
+
+.VideoGrid-module__YxI0mG__playButton {
+  background: #1e1e1ecc;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  display: flex;
+}
+
+.VideoGrid-module__YxI0mG__info {
+  padding: .8rem;
+}
+
+.VideoGrid-module__YxI0mG__videoTitle {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #fff;
+  font-size: .9rem;
+  overflow: hidden;
+}
+
+/* [project]/src/app/page.module.css [app-client] (css) */
+.page-module___8aEwW__main {
+  background-color: var(--background);
+  min-height: 100vh;
+  color: var(--foreground);
+}
+
+.page-module___8aEwW__header {
+  z-index: 50;
+  background: linear-gradient(#000000b3 0%, #0000 100%);
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  padding: 0 4%;
+  display: flex;
+  position: fixed;
+  top: 0;
+}
+
+.page-module___8aEwW__logo {
+  color: var(--netflix-red);
+  letter-spacing: .1rem;
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.page-module___8aEwW__content {
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+.page-module___8aEwW__uploadContainer {
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  display: flex;
+}
+
+.page-module___8aEwW__uploadRow {
+  padding: 0 4%;
+}
+
+/*# sourceMappingURL=src_b1dff7b0._.css.map*/

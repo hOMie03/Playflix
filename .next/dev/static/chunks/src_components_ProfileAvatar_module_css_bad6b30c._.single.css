@@ -1,0 +1,41 @@
+/* [project]/src/components/ProfileAvatar.module.css [app-client] (css) */
+.ProfileAvatar-module__6vB91a__avatarContainer {
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.ProfileAvatar-module__6vB91a__initial {
+  color: #fff;
+  font-weight: 700;
+  font-family: var(--font-inter), sans-serif;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.ProfileAvatar-module__6vB91a__large .ProfileAvatar-module__6vB91a__initial {
+  font-size: 5rem;
+}
+
+.ProfileAvatar-module__6vB91a__small .ProfileAvatar-module__6vB91a__initial {
+  font-size: 1.2rem;
+}
+
+.ProfileAvatar-module__6vB91a__image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .ProfileAvatar-module__6vB91a__large .ProfileAvatar-module__6vB91a__initial {
+    font-size: 3rem;
+  }
+}
+
+/*# sourceMappingURL=src_components_ProfileAvatar_module_css_bad6b30c._.single.css.map*/

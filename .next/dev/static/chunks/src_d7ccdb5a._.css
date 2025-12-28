@@ -1,0 +1,797 @@
+/* [project]/src/components/UploadZone.module.css [app-client] (css) */
+.UploadZone-module__SuXmHa__zone {
+  border: 2px dashed var(--netflix-gray);
+  cursor: pointer;
+  background-color: #141414cc;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  min-height: 300px;
+  margin: 2rem auto;
+  transition: all .3s;
+  display: flex;
+}
+
+.UploadZone-module__SuXmHa__zone:hover, .UploadZone-module__SuXmHa__dragging {
+  border-color: var(--netflix-red);
+  background-color: #e509141a;
+}
+
+.UploadZone-module__SuXmHa__hiddenInput {
+  display: none;
+}
+
+.UploadZone-module__SuXmHa__content {
+  text-align: center;
+  color: var(--foreground);
+  pointer-events: none;
+}
+
+.UploadZone-module__SuXmHa__iconWrapper {
+  color: var(--netflix-red);
+  margin-bottom: 1.5rem;
+}
+
+.UploadZone-module__SuXmHa__title {
+  margin-bottom: .5rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.UploadZone-module__SuXmHa__subtitle {
+  color: #ccc;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.UploadZone-module__SuXmHa__formats {
+  color: var(--netflix-gray);
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  font-size: .9rem;
+  display: flex;
+}
+
+/* [project]/src/components/VideoGrid.module.css [app-client] (css) */
+.VideoGrid-module__YxI0mG__gridContainer {
+  width: 100%;
+  padding: 2rem 4%;
+}
+
+.VideoGrid-module__YxI0mG__sectionTitle {
+  color: #e5e5e5;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.VideoGrid-module__YxI0mG__grid {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  display: grid;
+}
+
+.VideoGrid-module__YxI0mG__card {
+  background-color: var(--netflix-dark-gray);
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 4px;
+  transition: transform .3s cubic-bezier(.2, 0, 0, 1), z-index;
+  position: relative;
+  overflow: hidden;
+}
+
+.VideoGrid-module__YxI0mG__card:hover {
+  z-index: 10;
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px #00000080;
+}
+
+.VideoGrid-module__YxI0mG__thumbnailWrapper {
+  aspect-ratio: 16 / 9;
+  background-color: #000;
+  position: relative;
+}
+
+.VideoGrid-module__YxI0mG__thumbnail {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.VideoGrid-module__YxI0mG__placeholderThumb {
+  background: linear-gradient(45deg, #222, #333);
+  width: 100%;
+  height: 100%;
+}
+
+.VideoGrid-module__YxI0mG__overlay {
+  opacity: 0;
+  background: #0000004d;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transition: opacity .2s;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.VideoGrid-module__YxI0mG__card:hover .VideoGrid-module__YxI0mG__overlay {
+  opacity: 1;
+}
+
+.VideoGrid-module__YxI0mG__playButton {
+  background: #1e1e1ecc;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  display: flex;
+}
+
+.VideoGrid-module__YxI0mG__info {
+  padding: .8rem;
+}
+
+.VideoGrid-module__YxI0mG__videoTitle {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #fff;
+  font-size: .9rem;
+  overflow: hidden;
+}
+
+/* [project]/src/components/NetPlayer.module.css [app-client] (css) */
+.NetPlayer-module__LgmX7W__playerContainer {
+  z-index: 1000;
+  background-color: #000;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.NetPlayer-module__LgmX7W__video {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.NetPlayer-module__LgmX7W__video::cue {
+  font-family: var(--font-inter), sans-serif;
+  text-shadow: 0 0 6px #000000e6, 0 0 10px #000000b3;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  background: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+  transition: transform .3s;
+}
+
+.NetPlayer-module__LgmX7W__videoWithControls::-webkit-media-text-track-container {
+  transition: transform .3s;
+  transform: translateY(-80px);
+}
+
+.NetPlayer-module__LgmX7W__videoWithControls::-webkit-media-text-track-display {
+  transition: transform .3s;
+  transform: translateY(-80px);
+}
+
+@media (max-width: 768px) {
+  .NetPlayer-module__LgmX7W__videoWithControls::-webkit-media-text-track-container {
+    transform: translateY(-60px);
+  }
+}
+
+.NetPlayer-module__LgmX7W__controlsOverlay {
+  opacity: 1;
+  pointer-events: none;
+  background: linear-gradient(#000000b3 0%, #0000 15% 80%, #000c 100%);
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  transition: opacity .3s;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.NetPlayer-module__LgmX7W__topBar, .NetPlayer-module__LgmX7W__bottomBar, .NetPlayer-module__LgmX7W__centerPlay, .NetPlayer-module__LgmX7W__settingsMenu {
+  pointer-events: auto;
+}
+
+.NetPlayer-module__LgmX7W__hidden {
+  opacity: 0;
+  cursor: none;
+}
+
+.NetPlayer-module__LgmX7W__topBar {
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  display: flex;
+}
+
+.NetPlayer-module__LgmX7W__title {
+  color: #fff;
+  text-shadow: 0 1px 2px #00000080;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 1.2rem;
+  font-weight: 500;
+  overflow: hidden;
+}
+
+.NetPlayer-module__LgmX7W__centerPlay {
+  cursor: pointer;
+  background: #00000080;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.NetPlayer-module__LgmX7W__bottomBar {
+  flex-direction: column;
+  gap: .5rem;
+  width: 100%;
+  padding: 0 2rem 2rem;
+  display: flex;
+}
+
+.NetPlayer-module__LgmX7W__progressContainer {
+  cursor: pointer;
+  align-items: center;
+  width: 100%;
+  height: 20px;
+  display: flex;
+}
+
+.NetPlayer-module__LgmX7W__progressBar {
+  -webkit-appearance: none;
+  background: #ffffff4d;
+  background-image: linear-gradient(var(--netflix-red), var(--netflix-red));
+  cursor: pointer;
+  background-repeat: no-repeat;
+  border-radius: 2px;
+  outline: none;
+  width: 100%;
+  height: 4px;
+  transition: height .1s;
+}
+
+.NetPlayer-module__LgmX7W__progressContainer:hover .NetPlayer-module__LgmX7W__progressBar {
+  height: 8px;
+}
+
+.NetPlayer-module__LgmX7W__progressBar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: var(--netflix-red);
+  cursor: pointer;
+  opacity: 0;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  transition: opacity .1s;
+  box-shadow: 0 0 2px #555;
+}
+
+.NetPlayer-module__LgmX7W__progressContainer:hover .NetPlayer-module__LgmX7W__progressBar::-webkit-slider-thumb {
+  opacity: 1;
+}
+
+.NetPlayer-module__LgmX7W__controlsRow {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.NetPlayer-module__LgmX7W__leftControls, .NetPlayer-module__LgmX7W__rightControls {
+  align-items: center;
+  gap: 1.5rem;
+  display: flex;
+}
+
+.NetPlayer-module__LgmX7W__iconBtn {
+  color: #fff;
+  cursor: pointer;
+  background: none;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  transition: transform .1s;
+  display: flex;
+}
+
+.NetPlayer-module__LgmX7W__iconBtn:hover, .NetPlayer-module__LgmX7W__activeBtn {
+  color: #fff;
+  text-shadow: 0 0 10px #ffffff80;
+  transform: scale(1.1);
+}
+
+.NetPlayer-module__LgmX7W__textBtn {
+  color: #fff;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: .9rem;
+  font-weight: 500;
+}
+
+.NetPlayer-module__LgmX7W__textBtn:hover {
+  color: #ccc;
+}
+
+.NetPlayer-module__LgmX7W__volumeContainer {
+  align-items: center;
+  gap: .5rem;
+  display: flex;
+}
+
+.NetPlayer-module__LgmX7W__volumeSlider {
+  accent-color: #fff;
+  cursor: pointer;
+  width: 80px;
+  height: 4px;
+}
+
+.NetPlayer-module__LgmX7W__timeDisplay {
+  color: #ccc;
+  white-space: nowrap;
+  margin-left: .5rem;
+  font-size: .9rem;
+}
+
+.NetPlayer-module__LgmX7W__settingsMenu {
+  z-index: 2000;
+  background: #000000e6;
+  border: 1px solid #333;
+  border-radius: 4px;
+  gap: 2rem;
+  min-width: 300px;
+  max-height: 70vh;
+  padding: 1rem;
+  display: flex;
+  position: absolute;
+  bottom: 80px;
+  right: 2rem;
+}
+
+.NetPlayer-module__LgmX7W__settingsColumn {
+  flex-direction: column;
+  flex: 1;
+  gap: .5rem;
+  max-height: 300px;
+  padding-right: .5rem;
+  display: flex;
+  overflow-y: auto;
+}
+
+.NetPlayer-module__LgmX7W__settingsColumn::-webkit-scrollbar {
+  width: 6px;
+}
+
+.NetPlayer-module__LgmX7W__settingsColumn::-webkit-scrollbar-track {
+  background: #111;
+  border-radius: 3px;
+}
+
+.NetPlayer-module__LgmX7W__settingsColumn::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 3px;
+}
+
+.NetPlayer-module__LgmX7W__settingsColumn::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+.NetPlayer-module__LgmX7W__settingsColumn h4 {
+  color: #ccc;
+  text-transform: uppercase;
+  margin-bottom: .5rem;
+  font-size: .9rem;
+}
+
+.NetPlayer-module__LgmX7W__settingsOption {
+  color: #fff;
+  cursor: pointer;
+  border-radius: 2px;
+  padding: 4px 8px;
+  font-size: .9rem;
+}
+
+.NetPlayer-module__LgmX7W__settingsOption:hover {
+  background-color: #ffffff1a;
+  text-decoration: underline;
+}
+
+.NetPlayer-module__LgmX7W__selected {
+  font-weight: bold;
+}
+
+.NetPlayer-module__LgmX7W__selected:before {
+  content: "✓ ";
+  color: var(--netflix-red);
+}
+
+.NetPlayer-module__LgmX7W__settingsOptionDisabled {
+  color: #555;
+  padding: 4px 0;
+  font-size: .9rem;
+  font-style: italic;
+}
+
+.NetPlayer-module__LgmX7W__settingsDivider {
+  background-color: #333;
+  height: 1px;
+  margin: .5rem 0;
+}
+
+@media (max-width: 768px) {
+  .NetPlayer-module__LgmX7W__video::cue {
+    font-size: 1rem;
+  }
+
+  .NetPlayer-module__LgmX7W__topBar, .NetPlayer-module__LgmX7W__bottomBar {
+    padding: 1rem;
+  }
+
+  .NetPlayer-module__LgmX7W__leftControls, .NetPlayer-module__LgmX7W__rightControls {
+    gap: .8rem;
+  }
+
+  .NetPlayer-module__LgmX7W__volumeContainer, .NetPlayer-module__LgmX7W__timeDisplay, .NetPlayer-module__LgmX7W__textBtn {
+    display: none;
+  }
+
+  .NetPlayer-module__LgmX7W__settingsMenu {
+    flex-direction: column;
+    gap: 1rem;
+    width: calc(100vw - 2rem);
+    min-width: auto;
+    max-height: 60vh;
+    bottom: 70px;
+    right: 1rem;
+    overflow-y: auto;
+  }
+
+  .NetPlayer-module__LgmX7W__settingsColumn {
+    flex: none;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+
+  .NetPlayer-module__LgmX7W__centerPlay {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.NetPlayer-module__LgmX7W__spin {
+  animation: 1s linear infinite NetPlayer-module__LgmX7W__spin;
+}
+
+@keyframes NetPlayer-module__LgmX7W__spin {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* [project]/src/app/page.module.css [app-client] (css) */
+.page-module___8aEwW__main {
+  background-color: var(--background);
+  min-height: 100vh;
+  color: var(--foreground);
+}
+
+.page-module___8aEwW__header {
+  z-index: 50;
+  background: linear-gradient(#000000b3 0%, #0000 100%);
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  padding: 0 4%;
+  display: flex;
+  position: fixed;
+  top: 0;
+}
+
+.page-module___8aEwW__logo {
+  font-family: var(--font-bebas), sans-serif;
+  color: var(--netflix-red);
+  cursor: pointer;
+  font-size: 2.5rem;
+}
+
+.page-module___8aEwW__headerRight {
+  align-items: center;
+  gap: 1rem;
+  display: flex;
+  position: relative;
+}
+
+.page-module___8aEwW__headerProfile {
+  cursor: pointer;
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+}
+
+.page-module___8aEwW__headerProfile img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.page-module___8aEwW__profileDropdown {
+  background-color: #000000e6;
+  border: 1px solid #333;
+  flex-direction: column;
+  min-width: 150px;
+  padding: 10px;
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+}
+
+.page-module___8aEwW__profileDropdown.page-module___8aEwW__visible {
+  display: flex;
+}
+
+.page-module___8aEwW__dropdownItem {
+  color: #ccc;
+  cursor: pointer;
+  padding: 5px 0;
+  font-size: .9rem;
+}
+
+.page-module___8aEwW__dropdownItem:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.page-module___8aEwW__content {
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+.page-module___8aEwW__uploadContainer {
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  display: flex;
+}
+
+.page-module___8aEwW__uploadRow {
+  padding: 0 4%;
+}
+
+/* [project]/src/components/SplashScreen.module.css [app-client] (css) */
+.SplashScreen-module__I3M2YW__container {
+  z-index: 9999;
+  background-color: #000;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  animation: .5s ease-in-out 3s forwards SplashScreen-module__I3M2YW__fadeOut;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.SplashScreen-module__I3M2YW__logo {
+  font-family: var(--font-bebas), sans-serif;
+  color: #e50914;
+  letter-spacing: 4px;
+  opacity: 0;
+  font-size: 5rem;
+  animation: 2.8s cubic-bezier(.2, 0, 0, 1) forwards SplashScreen-module__I3M2YW__scaleUp;
+}
+
+@keyframes SplashScreen-module__I3M2YW__scaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  85% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(4);
+  }
+}
+
+@keyframes SplashScreen-module__I3M2YW__fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 768px) {
+  .SplashScreen-module__I3M2YW__logo {
+    font-size: 3rem;
+  }
+}
+
+/* [project]/src/components/ProfileGate.module.css [app-client] (css) */
+.ProfileGate-module__waBTTW__container {
+  z-index: 100;
+  background-color: #141414;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  animation: .5s ProfileGate-module__waBTTW__fadeIn;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.ProfileGate-module__waBTTW__title {
+  color: #fff;
+  font-size: 3.5rem;
+  font-weight: 400;
+  font-family: var(--font-bebas), sans-serif;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 3rem;
+}
+
+.ProfileGate-module__waBTTW__profileGrid {
+  gap: 2rem;
+  display: flex;
+}
+
+.ProfileGate-module__waBTTW__profileCard {
+  cursor: pointer;
+  group: hover;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  display: flex;
+}
+
+@keyframes ProfileGate-module__waBTTW__fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.ProfileGate-module__waBTTW__manageBtn {
+  color: gray;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-family: var(--font-inter), sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: #0000;
+  border: 1px solid gray;
+  margin-top: 3rem;
+  padding: .5rem 1.5rem;
+  transition: all .2s;
+}
+
+.ProfileGate-module__waBTTW__manageBtn:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+.ProfileGate-module__waBTTW__editOverlay {
+  background-color: #00000080;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.ProfileGate-module__waBTTW__dimmed img {
+  opacity: .5;
+}
+
+.ProfileGate-module__waBTTW__avatar {
+  border: 3px solid #0000;
+  border-radius: 4px;
+  width: 10vw;
+  min-width: 84px;
+  max-width: 200px;
+  height: 10vw;
+  min-height: 84px;
+  max-height: 200px;
+  transition: border-color .2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.ProfileGate-module__waBTTW__avatar img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.ProfileGate-module__waBTTW__profileCard:hover .ProfileGate-module__waBTTW__avatar {
+  border-color: #fff;
+}
+
+.ProfileGate-module__waBTTW__name {
+  color: gray;
+  font-size: 1.2rem;
+  font-family: var(--font-inter), sans-serif;
+  transition: color .2s;
+}
+
+.ProfileGate-module__waBTTW__profileCard:hover .ProfileGate-module__waBTTW__name {
+  color: #fff;
+}
+
+.ProfileGate-module__waBTTW__addProfile {
+  background-color: #0000;
+  border: 3px solid #333;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.ProfileGate-module__waBTTW__profileCard:hover .ProfileGate-module__waBTTW__addProfile {
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.ProfileGate-module__waBTTW__profileCard:hover .ProfileGate-module__waBTTW__addProfile svg {
+  color: #000 !important;
+}
+
+/*# sourceMappingURL=src_d7ccdb5a._.css.map*/

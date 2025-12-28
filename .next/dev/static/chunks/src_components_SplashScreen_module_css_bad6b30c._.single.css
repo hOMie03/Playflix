@@ -1,0 +1,59 @@
+/* [project]/src/components/SplashScreen.module.css [app-client] (css) */
+.SplashScreen-module__I3M2YW__container {
+  z-index: 9999;
+  background-color: #000;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  animation: .5s ease-in-out 3s forwards SplashScreen-module__I3M2YW__fadeOut;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.SplashScreen-module__I3M2YW__logo {
+  font-family: var(--font-bebas), sans-serif;
+  color: #e50914;
+  letter-spacing: 4px;
+  opacity: 0;
+  font-size: 5rem;
+  animation: 2.8s cubic-bezier(.2, 0, 0, 1) forwards SplashScreen-module__I3M2YW__scaleUp;
+}
+
+@keyframes SplashScreen-module__I3M2YW__scaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  85% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(4);
+  }
+}
+
+@keyframes SplashScreen-module__I3M2YW__fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 768px) {
+  .SplashScreen-module__I3M2YW__logo {
+    font-size: 3rem;
+  }
+}
+
+/*# sourceMappingURL=src_components_SplashScreen_module_css_bad6b30c._.single.css.map*/

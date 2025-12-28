@@ -1,0 +1,104 @@
+/* [project]/src/app/page.module.css [app-client] (css) */
+.page-module___8aEwW__main {
+  background-color: var(--background);
+  min-height: 100vh;
+  color: var(--foreground);
+}
+
+.page-module___8aEwW__header {
+  z-index: 50;
+  background: linear-gradient(#000000b3 0%, #0000 100%);
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  padding: 0 4%;
+  display: flex;
+  position: fixed;
+  top: 0;
+}
+
+.page-module___8aEwW__logo {
+  font-family: var(--font-bebas), sans-serif;
+  color: var(--netflix-red);
+  cursor: pointer;
+  font-size: 2.5rem;
+}
+
+.page-module___8aEwW__headerRight {
+  align-items: center;
+  gap: 1rem;
+  display: flex;
+  position: relative;
+}
+
+.page-module___8aEwW__headerProfile {
+  cursor: pointer;
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+}
+
+.page-module___8aEwW__headerProfile img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.page-module___8aEwW__profileDropdown {
+  background-color: #000000e6;
+  border: 1px solid #333;
+  flex-direction: column;
+  min-width: 150px;
+  padding: 10px;
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+}
+
+.page-module___8aEwW__visible {
+  display: flex;
+}
+
+.page-module___8aEwW__dropdownItem {
+  color: #ccc;
+  cursor: pointer;
+  padding: 5px 0;
+  font-size: .9rem;
+}
+
+.page-module___8aEwW__dropdownItem:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.page-module___8aEwW__content {
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+.page-module___8aEwW__uploadContainer {
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  display: flex;
+}
+
+.page-module___8aEwW__uploadRow {
+  padding: 0 4%;
+}
+
+@media (max-width: 768px) {
+  .page-module___8aEwW__uploadContainer {
+    height: auto;
+    padding: 4rem 1rem;
+  }
+
+  .page-module___8aEwW__uploadRow {
+    padding: 0 2rem;
+  }
+}
+
+/*# sourceMappingURL=src_app_page_module_css_bad6b30c._.single.css.map*/

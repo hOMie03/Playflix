@@ -1,0 +1,171 @@
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #141414;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    animation: fadeIn 0.5s ease;
+    overflow-y: auto;
+    /* Allow scrolling if many profiles */
+    padding: 2rem;
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 3rem;
+    font-family: var(--font-bebas), sans-serif;
+    /* Updated to Bebas Neue */
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.profileGrid {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow wrapping on mobile */
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1000px;
+    /* Prevent grid from being too wide */
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .profileGrid {
+        gap: 1.5rem;
+    }
+}
+
+.profileCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.manageBtn {
+    margin-top: 3rem;
+    background-color: transparent;
+    border: 1px solid grey;
+    color: grey;
+    padding: 0.5rem 1.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-family: var(--font-inter), sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.2s;
+}
+
+.manageBtn:hover {
+    color: white;
+    border-color: white;
+}
+
+.editOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dimmed img {
+    opacity: 0.5;
+}
+
+.avatar {
+    position: relative;
+    /* For overlay */
+    width: 10vw;
+    height: 10vw;
+    min-width: 84px;
+    min-height: 84px;
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 3px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profileCard:hover .avatar {
+    border-color: white;
+}
+
+.name {
+    color: #808080;
+    font-size: 1.2rem;
+    font-family: var(--font-inter), sans-serif;
+    transition: color 0.2s;
+}
+
+.profileCard:hover .name {
+    color: white;
+}
+
+.addProfile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 3px solid #333;
+    /* Darker border for add button */
+}
+
+.profileCard:hover .addProfile {
+    background-color: white;
+    border-color: white;
+}
+
+.profileCard:hover .addProfile svg {
+    color: black !important;
+    /* Invert icon color on hover */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
