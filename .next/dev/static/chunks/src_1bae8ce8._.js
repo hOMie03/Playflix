@@ -1875,6 +1875,47 @@ function ProfileGate({ profiles, onSelect, onAddProfile, onEditProfile }) {
                 fileName: "[project]/src/components/ProfileGate.tsx",
                 lineNumber: 62,
                 columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                fileName: "[project]/src/components/ProfileGate.tsx",
+                lineNumber: 68,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                style: {
+                    fontSize: "x-small"
+                },
+                children: [
+                    "made with ",
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                        style: {
+                            color: "red"
+                        },
+                        children: "♡"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/ProfileGate.tsx",
+                        lineNumber: 69,
+                        columnNumber: 61
+                    }, this),
+                    " by ",
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                        target: "_blank",
+                        style: {
+                            textDecoration: "underline",
+                            color: "lightblue"
+                        },
+                        href: "https://github.com/hOMie03",
+                        children: "omi:) "
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/ProfileGate.tsx",
+                        lineNumber: 69,
+                        columnNumber: 104
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/ProfileGate.tsx",
+                lineNumber: 69,
+                columnNumber: 13
             }, this)
         ]
     }, void 0, true, {

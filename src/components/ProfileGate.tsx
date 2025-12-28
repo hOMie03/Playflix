@@ -65,6 +65,8 @@ export default function ProfileGate({ profiles, onSelect, onAddProfile, onEditPr
             >
                 {isManaging ? "Done" : "Manage Profiles"}
             </button>
+            <br />
+            <span style={{ fontSize: "x-small" }}>made with <span style={{ color: "red" }}>♡</span> by <a target="_blank" style={{ textDecoration: "underline", color: "lightblue" }} href="https://github.com/hOMie03">omi:) </a></span>
         </div>
     );
 }
